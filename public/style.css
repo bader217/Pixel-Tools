@@ -222,21 +222,48 @@ a.page-btn {
         letter-spacing: 1px;
     }
 
-    /* ---- شريط الفلاتر ---- */
+   /* ============================================
+   FILTERS — شريط التصنيفات (الإصلاح الرئيسي)
+   ============================================ */
+.filters-section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 8px;
+    padding: 10px 12px;
+}
+
+.filters-section::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+
+/* ============================================
+   MOBILE — الجوال (768px فأقل)
+   ============================================ */
+@media (max-width: 768px) {
+
     .filters-section {
-        display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
-        gap: 6px;
         padding: 10px 12px;
-        position: static;
+        gap: 6px;
     }
 
     .filter-btn {
+        flex-shrink: 0;
         font-size: 8px;
         padding: 7px 11px;
-        line-height: 1.4;
+        white-space: nowrap;
     }
+}
 
     /* ---- قسم الأدوات ---- */
     .tools-section {
@@ -249,7 +276,7 @@ a.page-btn {
         gap: 10px;
         justify-items: stretch;
     }
-
+    
     /* ---- البطاقات ---- */
     .card {
         width: 100%;
