@@ -1,4 +1,4 @@
-# Tools Site
+# Pixel Tools
 
 A simple website that provides useful tools in one place with a clean and fast interface.
 
